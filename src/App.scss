@@ -1,0 +1,592 @@
+$primaryLight: rgb(251, 251, 251);
+$secondaryDark: #002659;
+$accent: #006849;
+
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;600&display=swap");
+
+/* animated hover underline (include using ::after)
+   use position: relative; and display: inline-block; on parent
+*/
+@mixin bottomBorder {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	background-color: $secondaryDark;
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+	transform-origin: bottom right;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.App {
+	background-color: $primaryLight;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 18px;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1100px;
+	padding: 0.5rem 2rem;
+	color: $secondaryDark;
+	@media (min-width: 1150px) {
+		padding: 0.5rem 0;
+	}
+	.nav-ul {
+		width: 100%;
+		display: flex;
+		align-items: flex-end;
+		list-style-type: none;
+		top: 0;
+		z-index: 1;
+		transition: top 0.3s;
+		gap: 1.5rem;
+		@media (max-width: 435px) {
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+		.nav-item {
+			width: min-content;
+			display: inline-block;
+			text-align: center;
+			$primaryLight-space: nowrap;
+			position: relative;
+			line-height: 1.75rem;
+		}
+		.nav-item::after {
+			@include bottomBorder;
+			background-color: $secondaryDark;
+		}
+		.nav-item:hover {
+			cursor: pointer;
+		}
+		.nav-item:hover:after {
+			transform: scaleX(1);
+			transform-origin: bottom left;
+		}
+		a {
+			color: $secondaryDark;
+			text-decoration: none;
+		}
+	}
+}
+
+.double-r {
+	font-family: Dosis;
+	font-size: 2.75rem;
+	color: $accent;
+}
+
+.hello-section {
+	color: $secondaryDark;
+	text-align: center;
+	height: 66vh;
+	width: 100%;
+	margin: 0 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 1rem 2rem;
+}
+
+.hello-container {
+	width: 100%;
+	height: 100%;
+	max-width: 1100px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: end;
+}
+.name-container {
+	text-align: left;
+}
+
+.name {
+	font-family: Dosis;
+	font-size: clamp(4rem, 12vw, 6rem);
+	color: $secondaryDark;
+	display: inline-block;
+	margin: 0;
+}
+
+.title {
+	margin-top: -5%;
+	font-size: clamp(0.85rem, 2vw, 1.5rem);
+	font-style: italic;
+}
+
+.accent {
+	color: $accent;
+}
+
+.accent-dark {
+	color: $primaryLight;
+}
+
+h2 {
+	font-size: 2.25rem;
+	font-family: Dosis;
+	font-weight: 600;
+}
+
+#projects-section {
+	color: $secondaryDark;
+	background-color: whitesmoke;
+	box-shadow: 0px 1px 20px rgba(black, 0.1) inset;
+	text-align: center;
+	padding: 2rem 2rem 4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+small {
+	font-style: italic;
+	font-size: 0.75rem;
+	margin-top: -0.25rem;
+	color: $accent;
+}
+
+.made-with {
+	margin: 0.25rem 0 0.15rem;
+}
+
+.tools {
+	display: flex;
+	font-family: Dosis;
+	justify-content: space-between;
+	gap: 2rem;
+	width: 100%;
+	max-width: 550px;
+	font-size: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.tools-left,
+.tools-right {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	line-height: 2.75em;
+}
+
+.tools-left {
+	text-align: left;
+}
+.tools-right {
+	text-align: right;
+}
+
+.tool {
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 1.45rem;
+}
+
+.project-grid {
+	padding: 1rem 0;
+	display: grid;
+	gap: 1.5em;
+	background-color: whitesmoke;
+	max-width: 1200px;
+}
+
+.project-card {
+	width: 100%;
+	max-width: 550px;
+	background-color: $primaryLight;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 4px 7.5px rgba(black, 0.3);
+	transition: 250ms;
+	@media (hover: hover) {
+		&:hover {
+			box-shadow: 0px 10px 20px rgba(black, 0.3);
+			transform: scale(1.05);
+		}
+	}
+}
+
+.project-img {
+	height: 200px;
+	width: 100%;
+	position: relative;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	z-index: 10;
+}
+
+.project-info {
+	padding: 1.5rem 1rem 0;
+	width: 100%;
+}
+
+.project-name {
+	text-align: left;
+	color: $accent;
+	font-weight: 700;
+	font-size: 1.75rem;
+	font-family: Dosis;
+}
+
+.project-tech-stack {
+	list-style-type: none;
+	display: flex;
+	gap: 1rem;
+	padding-bottom: 0.25em;
+}
+.project-tech {
+	color: $secondaryDark;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
+.project-desc {
+	color: $secondaryDark;
+	padding-bottom: 1rem;
+	text-align: left;
+}
+
+.project-links {
+	width: 100%;
+	display: flex;
+	gap: 0.75rem;
+	row-gap: 0.25rem;
+	flex-wrap: wrap;
+	margin: auto 0 1.5rem 1rem;
+	padding-right: 2rem;
+}
+.project-link {
+	text-decoration: none;
+	background-color: $accent;
+	color: $primaryLight;
+	border-radius: 20px;
+	border: 2px solid transparent;
+	padding: 0.25rem 0.75rem;
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 0.95rem;
+	@media (hover: hover) {
+		&:hover {
+			background-color: $primaryLight;
+			color: $accent;
+			border: 2px solid $accent;
+		}
+	}
+}
+
+.html {
+	color: rgb(255, 0, 43);
+}
+
+.css {
+	color: rgb(208, 131, 6);
+}
+
+.js {
+	color: rgb(52, 130, 104);
+}
+
+.ts {
+	color: rgb(9, 35, 122);
+}
+
+.react {
+	color: rgb(183, 13, 177);
+}
+
+.project-img.cocktails {
+	background-image: url(../public/images/cocktails-ss.png);
+	background-position: top 5% left;
+}
+
+.project-img.flag-game {
+	background-image: url(../public/images/flag-game-react-ss.png);
+	background-position: top 5% left;
+}
+
+.project-img.todo-list {
+	background-image: url(../public/images/todo-app-ss.jpg);
+}
+
+.project-img.space {
+	background-image: url(../public/images/space-tourism-website-ss.png);
+}
+
+.project-img.comments {
+	background-image: url(../public/images/comments.jpg);
+	background-size: 150%;
+}
+
+.project-img.bookmark {
+	background-image: url(../public/images/bookmark.jpg);
+}
+
+#about-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $accent;
+	color: $primaryLight;
+	padding: 2rem 2rem 4rem;
+	width: 100%;
+	h2 {
+		color: $primaryLight;
+	}
+}
+
+.about-ul {
+	max-width: 1100px;
+	list-style-type: none;
+	display: grid;
+	grid-template-rows: 1fr;
+	align-items: top;
+	margin-top: 0.5rem;
+	gap: 1.5rem;
+}
+
+.about-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $primaryLight;
+	color: $secondaryDark;
+	border-radius: 5px;
+	max-width: 500px;
+}
+
+.about-svg {
+	height: 200px;
+	width: 100%;
+	margin-top: 1rem;
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-image: url(../public/images/soccer.svg);
+}
+
+.about-icon {
+	font-size: 2.5rem;
+	color: $primaryLight;
+}
+.about-p {
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+#contact-section {
+	background-color: $secondaryDark;
+	width: 100%;
+	color: $primaryLight;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem 2rem 7rem;
+	position: relative;
+	.contact-title {
+		padding-bottom: 0.5rem;
+	}
+	a {
+		text-decoration: none;
+		font-size: 1rem;
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		background: $accent;
+		color: $primaryLight;
+		border: 2px solid transparent;
+		padding: 0.5rem 1rem;
+		margin-top: 1rem;
+		border-radius: 15px;
+		@media (hover: hover) {
+			&:hover {
+				background: $primaryLight;
+				color: $secondaryDark;
+				border: 2px solid $secondaryDark;
+			}
+		}
+	}
+
+	&:visited {
+		color: initial;
+	}
+}
+.footer-form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	& input {
+		font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic,
+			sans-serif;
+		padding: 0.25rem 0.5rem;
+		font-size: 1rem;
+		border-radius: 2px;
+		border: 0;
+		border: 2px solid $primaryLight;
+		color: $secondaryDark;
+		&:focus {
+			outline: 0;
+			border: 2px solid $secondaryDark;
+		}
+	}
+}
+
+.footer-form > * {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 0.25rem;
+	margin-bottom: 0.5rem;
+}
+
+.message-input {
+	resize: none;
+	font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic,
+		sans-serif;
+	padding: 0.5rem;
+	font-size: 1rem;
+	border-radius: 2px;
+	border: 2px solid $primaryLight;
+	color: $secondaryDark;
+	&:focus {
+		outline: 0;
+		border: 2px solid $secondaryDark;
+	}
+}
+
+.footer-submit-btn {
+	cursor: pointer;
+	background: $accent;
+	color: $primaryLight;
+	border: 2px solid transparent;
+	padding: 0.5rem 1.25rem;
+	border-radius: 15px;
+	font-weight: 700;
+	font-size: 1rem;
+	margin-top: 0.5rem;
+	@media (hover: hover) {
+		&:hover {
+			background: $primaryLight;
+			color: $secondaryDark;
+			border: 2px solid $secondaryDark;
+		}
+	}
+}
+
+.footer-arrows {
+	position: absolute;
+	right: 2rem;
+	bottom: 2rem;
+}
+
+@media (min-width: 900px) {
+	.tools {
+		justify-content: center;
+		max-width: 1100px;
+		gap: 1.5rem;
+		margin-top: 0.25rem;
+		font-family: Dosis;
+	}
+
+	.tools-left,
+	.tools-right {
+		text-align: center;
+		flex-direction: row;
+		gap: 1.5rem;
+	}
+
+	.tool {
+		font-style: normal;
+		text-transform: uppercase;
+		font-size: 1.45rem;
+	}
+
+	.footer-form {
+		gap: 0.5rem;
+	}
+	.footer-form > * {
+		gap: 0.5rem;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.hello-container {
+		margin-top: 5rem;
+	}
+
+	.double-r {
+		font-size: 5vw;
+	}
+	.nav-item {
+		font-size: 1.25rem;
+		transition: font-size 1s ease;
+	}
+	.projects {
+		.tech-slider {
+			.tech {
+				margin: 0;
+			}
+		}
+	}
+	.about-ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.project-grid {
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(4, 1fr);
+		max-width: 1100px;
+	}
+	.project-desc {
+		max-width: 450px;
+	}
+
+	.project-card.cocktails {
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+	}
+	.project-card.todo-list {
+		grid-column: 3 / 4;
+		grid-row: 1 / 2;
+	}
+	.project-card.comments {
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+	}
+
+	.project-card.flag-game {
+		grid-column: 2 / 4;
+		grid-row: 2 / 3;
+	}
+	.project-card.space {
+		grid-row: 1 / 2;
+		grid-column: 4 / 5;
+	}
+}
