@@ -41,9 +41,9 @@ function App() {
 			id: 4,
 			name: "Space Tourism Website",
 			photoQuery: "space",
-			techStack: ["React", "React Hooks"],
+			techStack: ["React", "React Router DOM"],
 			description:
-				"Search through and filter countries. Pulls data from the Rest Countries API.",
+				"A brochure website for a mock space tourism company. Routing implemented with React Router DOM.",
 			github: "https://github.com/RickyReyes/space-tourism-website",
 			liveSite: "https://space-tourism-website-ten-lime.vercel.app/",
 		},

@@ -100,7 +100,7 @@ header .nav-ul a {
 .hello-section {
   color: #002659;
   text-align: center;
-  height: 66vh;
+  height: 60vh;
   width: 100%;
   margin: 0 1rem;
   display: flex;
@@ -116,7 +116,7 @@ header .nav-ul a {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .name-container {
