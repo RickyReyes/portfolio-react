@@ -7,8 +7,10 @@ const ProjectCard = ({ ...project }) => {
 			<div className="project-info">
 				<h3 className="project-name">{project.name}</h3>
 				<ul className="project-tech-stack">
-					{project.techStack.map((techName) => (
-						<li className="project-tech">{techName}</li>
+					{project.techStack.map((techName, idx) => (
+						<li className="project-tech" key={idx}>
+							{techName}
+						</li>
 					))}
 				</ul>
 				<p className="project-desc">{project.description}</p>

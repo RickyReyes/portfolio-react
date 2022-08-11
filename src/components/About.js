@@ -13,7 +13,7 @@ const About = () => {
 			svgQuery: "team.svg",
 		},
 		{
-			text: "If I'm not working or coding, I'm either watching or playing soccer, eating tacos, or spending time with my girlfriend and family.",
+			text: "When I'm not working or coding, I like to spend time with my family, and watch and play soccer.",
 			icon: <i className="about-icon fa-regular fa-futbol"></i>,
 			svgQuery: "soccer.svg",
 		},
@@ -22,8 +22,8 @@ const About = () => {
 		<section id="about-section">
 			<h2>About</h2>
 			<ul className="about-ul">
-				{aboutData.map((obj) => (
-					<li className="about-card">
+				{aboutData.map((obj, idx) => (
+					<li key={idx} className="about-card">
 						<div
 							style={{
 								backgroundImage: `url(../images/${obj.svgQuery})`,

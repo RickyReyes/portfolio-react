@@ -90,7 +90,7 @@ function App() {
 				</div>
 				<ul className="project-grid">
 					{projectsData.map((project) => (
-						<ProjectCard {...project} />
+						<ProjectCard key={project.id} {...project} />
 					))}
 				</ul>
 			</section>
