@@ -97,6 +97,8 @@ header {
 	font-family: Dosis;
 	font-size: 2.75rem;
 	color: $accent;
+	margin-right: 1rem;
+	letter-spacing: -4px;
 }
 
 .hello-section {
@@ -326,7 +328,7 @@ small {
 
 .project-img.cocktails {
 	background-image: url(../public/images/cocktails-ss.png);
-	background-position: top 5% left;
+	background-position: top 2% left;
 }
 
 .project-img.flag-game {

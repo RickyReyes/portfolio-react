@@ -9,11 +9,11 @@ function App() {
 	const projectsData = [
 		{
 			id: 1,
-			name: "Cocktails*",
+			name: "Create Cocktail App*",
 			photoQuery: "cocktails",
 			techStack: ["React", "Tailwind CSS"],
 			description:
-				"An app about cocktails for those of legal drinking age. Select your available ingredients and see what cocktails you can make.",
+				"An app about cocktails for those of legal drinking age. Browse through cocktails, or select your available ingredients and see what cocktails you can make.",
 			github: "https://github.com/RickyReyes/cocktails",
 			liveSite: "https://cocktails-nu-nine.vercel.app/",
 		},
