@@ -5,6 +5,8 @@ import About from "./components/About";
 import "./App.css";
 import ContactFooter from "./components/ContactFooter";
 
+import { BrowserRouter as Router, Link } from "react-router-dom";
+
 function App() {
 	const projectsData = [
 		{
@@ -37,15 +39,25 @@ function App() {
 			github: "https://github.com/RickyReyes/todo-app",
 			liveSite: "https://todo-app-pink-sigma.vercel.app/",
 		},
+		// {
+		// 	id: 4,
+		// 	name: "Space Tourism Website",
+		// 	photoQuery: "space",
+		// 	techStack: ["React", "React Router DOM"],
+		// 	description:
+		// 		"A brochure website for a mock space tourism company. Routing implemented with React Router DOM.",
+		// 	github: "https://github.com/RickyReyes/space-tourism-website",
+		// 	liveSite: "https://space-tourism-website-ten-lime.vercel.app/",
+		// },
 		{
 			id: 4,
-			name: "Space Tourism Website",
-			photoQuery: "space",
-			techStack: ["React", "React Router DOM"],
+			name: "DevJobs",
+			photoQuery: "devjobs",
+			techStack: ["TypeScript", "React", "React Router DOM"],
 			description:
-				"A brochure website for a mock space tourism company. Routing implemented with React Router DOM.",
-			github: "https://github.com/RickyReyes/space-tourism-website",
-			liveSite: "https://space-tourism-website-ten-lime.vercel.app/",
+				"A mock website for a tech job postings site. Includes a modal for small screen sizes, filter functionality and routing for each job's detail page.",
+			github: "https://github.com/RickyReyes/devjobs",
+			liveSite: "https://devjobs-seven.vercel.app/",
 		},
 		{
 			id: 5,
@@ -88,11 +100,13 @@ function App() {
 						<small className="tool react">React Router DOM</small>
 					</div>
 				</div>
-				<ul className="project-grid">
-					{projectsData.map((project) => (
-						<ProjectCard key={project.id} {...project} />
-					))}
-				</ul>
+				<Router>
+					<ul className="project-grid">
+						{projectsData.map((project) => (
+							<ProjectCard key={project.id} {...project} />
+						))}
+					</ul>
+				</Router>
 			</section>
 			<About />
 			<ContactFooter />

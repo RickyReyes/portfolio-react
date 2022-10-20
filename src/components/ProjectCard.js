@@ -19,7 +19,12 @@ const ProjectCard = ({ ...project }) => {
 				<a className="project-link" href={project.github}>
 					Source Code
 				</a>
-				<a className="project-link" href={project.liveSite}>
+				<a
+					className="project-link"
+					href={project.liveSite}
+					target="_blank"
+					rel="noreferrer"
+				>
 					Live Site
 				</a>
 			</div>

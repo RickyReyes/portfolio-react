@@ -32,6 +32,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+a {
+	text-decoration: none;
+}
+
 .App {
 	background-color: $primaryLight;
 	display: flex;
@@ -286,7 +290,8 @@ small {
 	margin: auto 0 1.5rem 1rem;
 	padding-right: 2rem;
 }
-.project-link {
+.project-link,
+.project-link a {
 	text-decoration: none;
 	background-color: $accent;
 	color: $primaryLight;
@@ -297,6 +302,7 @@ small {
 	white-space: nowrap;
 	cursor: pointer;
 	font-size: 0.95rem;
+
 	@media (hover: hover) {
 		&:hover {
 			background-color: $primaryLight;
@@ -351,6 +357,9 @@ small {
 
 .project-img.bookmark {
 	background-image: url(../public/images/bookmark.jpg);
+}
+.project-img.devjobs {
+	background-image: url(../public/images/devjobs.jpg);
 }
 
 #about-section {

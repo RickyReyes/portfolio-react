@@ -14,6 +14,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 .App {
   background-color: rgb(251, 251, 251);
   display: flex;
@@ -288,7 +292,8 @@ small {
   padding-right: 2rem;
 }
 
-.project-link {
+.project-link,
+.project-link a {
   text-decoration: none;
   background-color: #006849;
   color: rgb(251, 251, 251);
@@ -301,7 +306,8 @@ small {
   font-size: 0.95rem;
 }
 @media (hover: hover) {
-  .project-link:hover {
+  .project-link:hover,
+.project-link a:hover {
     background-color: rgb(251, 251, 251);
     color: #006849;
     border: 2px solid #006849;
@@ -353,6 +359,10 @@ small {
 
 .project-img.bookmark {
   background-image: url(../public/images/bookmark.jpg);
+}
+
+.project-img.devjobs {
+  background-image: url(../public/images/devjobs.jpg);
 }
 
 #about-section {
