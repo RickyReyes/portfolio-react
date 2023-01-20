@@ -9,7 +9,7 @@ const Box = (props) => {
   });
   return (
     <mesh {...props} ref={mesh}>
-      <boxGeometry args={[2.5, 2.5, 2.5]} />
+      <boxGeometry args={[3, 3, 3]} />
       <meshNormalMaterial color={0x006849} />
     </mesh>
   );

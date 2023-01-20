@@ -1,6 +1,8 @@
-$primaryLight: rgb(251, 251, 251);
-$secondaryDark: #002659;
-$accent: #006849;
+$light: rgb(251, 251, 251);
+$grey: rgb(243, 243, 243);
+$dark: #002659;
+$accent: rgb(6 95 70);
+$font: "Dosis";
 
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;600&display=swap");
 
@@ -9,13 +11,16 @@ $accent: #006849;
 }
 
 .accent-dark {
-  color: $primaryLight;
+  color: $light;
 }
 
-h2 {
-  font-size: 2.25rem;
-  font-family: Dosis;
-  font-weight: 600;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font;
 }
 
 *,
@@ -35,53 +40,64 @@ html {
   flex-direction: column;
   align-items: center;
   box-shadow: 0px 1px 20px rgba(black, 0.1) inset;
-  background-color: whitesmoke;
+  background-color: $light;
 }
 
 .hero {
   width: 100%;
   max-width: 500px;
   padding: 1.5rem;
-  .name {
-    text-align: left;
-    &__name {
-      font-family: Dosis;
-      color: $secondaryDark;
-      font-size: 4rem;
-    }
-    &__title {
-      margin-top: -2.25%;
-      font-size: 0.95rem;
-      font-style: italic;
-      font-weight: normal;
-    }
+  &__name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__name {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    font-family: $font;
+    color: $dark;
+    font-size: 4rem;
+    line-height: 50px;
+    padding-bottom: 0.75rem;
+  }
+  &__title {
+    font-size: 0.95rem;
+    font-style: italic;
   }
 }
 
-.projects-section {
-  color: $secondaryDark;
-  padding: 1rem 1.5rem 4rem;
-  margin: 1.5rem;
+.projects {
+  color: $dark;
+  padding: 2rem 1.5rem 4rem;
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 500px;
-  &__title {
-    text-align: left;
+  background-color: $grey;
+  &__heading {
+    margin: 0 auto;
+  }
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    margin: 0 auto;
+  }
+  &__show-more {
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer;
+    font-family: $font;
+    font-weight: 700;
+    font-size: 1.5rem;
   }
 }
 
-.project-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding-top: 1rem;
-  background-color: whitesmoke;
-}
-
 .project {
-  max-width: 500px;
-  background-color: $primaryLight;
+  max-width: 750px;
+  background-color: $light;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -93,154 +109,91 @@ html {
       transform: scale(1.05);
     }
   }
-}
+  &__info {
+    padding: 1rem;
+    font-size: 0.9125rem;
+    flex: 1;
+  }
+  &__name {
+    text-align: left;
+    color: $accent;
+    font-size: 1.25rem;
+  }
+  &__tech-stack {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 0.25em;
+  }
+  &__tech {
+    color: $dark;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+  &__desc {
+    color: $dark;
+    padding-bottom: 1rem;
+    text-align: left;
+  }
+  &__links {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  &__link {
+    text-decoration: underline;
+    color: $dark;
+    border: 2px solid transparent;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 0.9125rem;
+  }
+  &__img {
+    flex: 0.75;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    &.cocktails {
+      background-image: url(../public/images/cocktails-ss.png);
+      background-position: top 2% left;
+    }
 
-.project-info {
-  padding: 1rem;
-  font-size: 0.9125rem;
-  flex: 1;
-}
+    &.flag-game {
+      background-image: url(../public/images/flag-game-react-ss.png);
+      background-position: top 5% left 50%;
+    }
 
-.project-name {
-  text-align: left;
-  color: $accent;
-}
+    &.todo-list {
+      background-image: url(../public/images/todo-app-ss.jpg);
+    }
+    &.comments {
+      background-image: url(../public/images/comments.jpg);
+      background-size: 150%;
+    }
 
-.project-tech-stack {
-  list-style-type: none;
-  display: flex;
-  gap: 1rem;
-  padding-bottom: 0.25em;
-}
-.project-tech {
-  color: $secondaryDark;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-}
-
-.project-desc {
-  color: $secondaryDark;
-  padding-bottom: 1rem;
-  text-align: left;
-}
-
-.project-links {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.project-link,
-.project-link a {
-  text-decoration: underline;
-  color: $secondaryDark;
-  border: 2px solid transparent;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-  font-size: 0.9125rem;
-}
-
-.project-img {
-  flex: 0.75;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 10;
-}
-
-.project-img.cocktails {
-  background-image: url(../public/images/cocktails-ss.png);
-  background-position: top 2% left;
-}
-
-.project-img.flag-game {
-  background-image: url(../public/images/flag-game-react-ss.png);
-  background-position: top 5% left;
-}
-
-.project-img.todo-list {
-  background-image: url(../public/images/todo-app-ss.jpg);
-}
-
-.project-img.space {
-  background-image: url(../public/images/space-tourism-website-ss.png);
-}
-
-.project-img.comments {
-  background-image: url(../public/images/comments.jpg);
-  background-size: 150%;
-}
-
-.project-img.bookmark {
-  background-image: url(../public/images/bookmark.jpg);
-}
-.project-img.devjobs {
-  background-image: url(../public/images/devjobs.jpg);
-}
-
-#about-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $accent;
-  color: $primaryLight;
-  padding: 2rem 2rem 4rem;
-  width: 100%;
-  h2 {
-    color: $primaryLight;
+    &.bookmark {
+      background-image: url(../public/images/bookmark.jpg);
+    }
+    &.devjobs {
+      background-image: url(../public/images/devjobs.jpg);
+    }
   }
 }
 
-.about-ul {
-  max-width: 1100px;
-  list-style-type: none;
-  display: grid;
-  grid-template-rows: 1fr;
-  align-items: top;
-  margin-top: 0.5rem;
-  gap: 1.5rem;
-}
-
-.about-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $primaryLight;
-  color: $secondaryDark;
-  border-radius: 5px;
-  max-width: 500px;
-}
-
-.about-svg {
-  height: 200px;
+.contact {
+  background-color: $dark;
   width: 100%;
-  margin-top: 1rem;
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-image: url(../public/images/soccer.svg);
-}
-
-.about-icon {
-  font-size: 2.5rem;
-  color: $primaryLight;
-}
-.about-p {
-  padding: 1rem;
-  font-size: 1rem;
-}
-
-#contact-section {
-  background-color: $secondaryDark;
-  width: 100%;
-  color: $primaryLight;
+  color: $light;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem 2rem 7rem;
   position: relative;
-  .contact-title {
+  &__heading {
     padding-bottom: 0.5rem;
   }
   a {
@@ -250,16 +203,16 @@ html {
     display: inline-block;
     position: relative;
     background: $accent;
-    color: $primaryLight;
+    color: $light;
     border: 2px solid transparent;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
     border-radius: 15px;
     @media (hover: hover) {
       &:hover {
-        background: $primaryLight;
-        color: $secondaryDark;
-        border: 2px solid $secondaryDark;
+        background: $light;
+        color: $dark;
+        border: 2px solid $dark;
       }
     }
   }
@@ -279,11 +232,11 @@ html {
     font-size: 1rem;
     border-radius: 2px;
     border: 0;
-    border: 2px solid $primaryLight;
-    color: $secondaryDark;
+    border: 2px solid $light;
+    color: $dark;
     &:focus {
       outline: 0;
-      border: 2px solid $secondaryDark;
+      border: 2px solid $dark;
     }
   }
 }
@@ -302,18 +255,18 @@ html {
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 2px;
-  border: 2px solid $primaryLight;
-  color: $secondaryDark;
+  border: 2px solid $light;
+  color: $dark;
   &:focus {
     outline: 0;
-    border: 2px solid $secondaryDark;
+    border: 2px solid $dark;
   }
 }
 
 .footer-submit-btn {
   cursor: pointer;
   background: $accent;
-  color: $primaryLight;
+  color: $light;
   border: 2px solid transparent;
   padding: 0.5rem 1.25rem;
   border-radius: 15px;
@@ -322,9 +275,9 @@ html {
   margin-top: 0.5rem;
   @media (hover: hover) {
     &:hover {
-      background: $primaryLight;
-      color: $secondaryDark;
-      border: 2px solid $secondaryDark;
+      background: $light;
+      color: $dark;
+      border: 2px solid $dark;
     }
   }
 }
@@ -341,7 +294,7 @@ html {
     max-width: 1100px;
     gap: 1.5rem;
     margin-top: 0.25rem;
-    font-family: Dosis;
+    font-family: $font;
   }
 
   .tools-left,
@@ -400,5 +353,5 @@ html {
 
 .mesh {
   border: 10px solid red;
-  z-index: 10;
+  z-index: 2;
 }

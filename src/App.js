@@ -1,7 +1,8 @@
-import Hero from "./components/Hero";
 import "./App.css";
-import Projects from "./components/Projects";
-import ContactFooter from "./components/ContactFooter";
+import { useState } from "react";
+import Hero from "./components/Hero";
+import ProjectCard from "./components/ProjectCard";
+import Contact from "./components/Contact";
 
 function App() {
   const projectsData = [
@@ -35,16 +36,6 @@ function App() {
       github: "https://github.com/RickyReyes/todo-app",
       liveSite: "https://todo-app-pink-sigma.vercel.app/",
     },
-    // {
-    // 	id: 4,
-    // 	name: "Space Tourism Website",
-    // 	photoQuery: "space",
-    // 	techStack: ["React", "React Router DOM"],
-    // 	description:
-    // 		"A brochure website for a mock space tourism company. Routing implemented with React Router DOM.",
-    // 	github: "https://github.com/RickyReyes/space-tourism-website",
-    // 	liveSite: "https://space-tourism-website-ten-lime.vercel.app/",
-    // },
     {
       id: 4,
       name: "DevJobs",
@@ -75,17 +66,30 @@ function App() {
     },
   ];
 
-  let showMoreProjects = false;
+  const [showMore, setShowMore] = useState(false);
 
-  let renderedProjects = showMoreProjects
-    ? projectsData
-    : projectsData.slice(0, 6);
+  let renderedProjects = showMore ? projectsData : projectsData.slice(0, 3);
 
   return (
     <div className="App">
       <Hero />
-      <Projects renderedProjects={renderedProjects} />
-      <ContactFooter />
+      <section className="projects">
+        <h2 className="projects__heading">Projects</h2>
+        <ul className="projects__ul">
+          {renderedProjects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
+          {!showMore && (
+            <p
+              className="projects__show-more"
+              onClick={() => setShowMore(true)}
+            >
+              Show More
+            </p>
+          )}
+        </ul>
+      </section>
+      <Contact />
     </div>
   );
 }

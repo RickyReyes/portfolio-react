@@ -1,16 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;600&display=swap");
 .accent {
-  color: #006849;
+  color: rgb(6, 95, 70);
 }
 
 .accent-dark {
   color: rgb(251, 251, 251);
 }
 
-h2 {
-  font-size: 2.25rem;
-  font-family: Dosis;
-  font-weight: 600;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Dosis";
 }
 
 *,
@@ -30,7 +33,7 @@ html {
   flex-direction: column;
   align-items: center;
   box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1) inset;
-  background-color: whitesmoke;
+  background-color: rgb(251, 251, 251);
 }
 
 .hero {
@@ -38,44 +41,55 @@ html {
   max-width: 500px;
   padding: 1.5rem;
 }
-.hero .name {
-  text-align: left;
+.hero__name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.hero .name__name {
-  font-family: Dosis;
+.hero__name {
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  font-family: "Dosis";
   color: #002659;
   font-size: 4rem;
+  line-height: 50px;
+  padding-bottom: 0.75rem;
 }
-.hero .name__title {
-  margin-top: -2.25%;
+.hero__title {
   font-size: 0.95rem;
   font-style: italic;
-  font-weight: normal;
 }
 
-.projects-section {
+.projects {
   color: #002659;
-  padding: 1rem 1.5rem 4rem;
-  margin: 1.5rem;
+  padding: 2rem 1.5rem 4rem;
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 500px;
+  background-color: rgb(243, 243, 243);
 }
-.projects-section__title {
-  text-align: left;
+.projects__heading {
+  margin: 0 auto;
 }
-
-.project-list {
+.projects__ul {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding-top: 1rem;
-  background-color: whitesmoke;
+  margin: 0 auto;
+}
+.projects__show-more {
+  text-decoration: underline;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Dosis";
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .project {
-  max-width: 500px;
+  max-width: 750px;
   background-color: rgb(251, 251, 251);
   border-radius: 5px;
   display: flex;
@@ -89,45 +103,38 @@ html {
     transform: scale(1.05);
   }
 }
-
-.project-info {
+.project__info {
   padding: 1rem;
   font-size: 0.9125rem;
   flex: 1;
 }
-
-.project-name {
+.project__name {
   text-align: left;
-  color: #006849;
+  color: rgb(6, 95, 70);
+  font-size: 1.25rem;
 }
-
-.project-tech-stack {
+.project__tech-stack {
   list-style-type: none;
   display: flex;
   gap: 1rem;
   padding-bottom: 0.25em;
 }
-
-.project-tech {
+.project__tech {
   color: #002659;
   font-size: 0.75rem;
   text-transform: uppercase;
 }
-
-.project-desc {
+.project__desc {
   color: #002659;
   padding-bottom: 1rem;
   text-align: left;
 }
-
-.project-links {
+.project__links {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
 }
-
-.project-link,
-.project-link a {
+.project__link {
   text-decoration: underline;
   color: #002659;
   border: 2px solid transparent;
@@ -136,100 +143,38 @@ html {
   cursor: pointer;
   font-size: 0.9125rem;
 }
-
-.project-img {
+.project__img {
   flex: 0.75;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 10;
+  z-index: 2;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-
-.project-img.cocktails {
+.project__img.cocktails {
   background-image: url(../public/images/cocktails-ss.png);
   background-position: top 2% left;
 }
-
-.project-img.flag-game {
+.project__img.flag-game {
   background-image: url(../public/images/flag-game-react-ss.png);
-  background-position: top 5% left;
+  background-position: top 5% left 50%;
 }
-
-.project-img.todo-list {
+.project__img.todo-list {
   background-image: url(../public/images/todo-app-ss.jpg);
 }
-
-.project-img.space {
-  background-image: url(../public/images/space-tourism-website-ss.png);
-}
-
-.project-img.comments {
+.project__img.comments {
   background-image: url(../public/images/comments.jpg);
   background-size: 150%;
 }
-
-.project-img.bookmark {
+.project__img.bookmark {
   background-image: url(../public/images/bookmark.jpg);
 }
-
-.project-img.devjobs {
+.project__img.devjobs {
   background-image: url(../public/images/devjobs.jpg);
 }
 
-#about-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #006849;
-  color: rgb(251, 251, 251);
-  padding: 2rem 2rem 4rem;
-  width: 100%;
-}
-#about-section h2 {
-  color: rgb(251, 251, 251);
-}
-
-.about-ul {
-  max-width: 1100px;
-  list-style-type: none;
-  display: grid;
-  grid-template-rows: 1fr;
-  align-items: top;
-  margin-top: 0.5rem;
-  gap: 1.5rem;
-}
-
-.about-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(251, 251, 251);
-  color: #002659;
-  border-radius: 5px;
-  max-width: 500px;
-}
-
-.about-svg {
-  height: 200px;
-  width: 100%;
-  margin-top: 1rem;
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-image: url(../public/images/soccer.svg);
-}
-
-.about-icon {
-  font-size: 2.5rem;
-  color: rgb(251, 251, 251);
-}
-
-.about-p {
-  padding: 1rem;
-  font-size: 1rem;
-}
-
-#contact-section {
+.contact {
   background-color: #002659;
   width: 100%;
   color: rgb(251, 251, 251);
@@ -239,16 +184,16 @@ html {
   padding: 2rem 2rem 7rem;
   position: relative;
 }
-#contact-section .contact-title {
+.contact__heading {
   padding-bottom: 0.5rem;
 }
-#contact-section a {
+.contact a {
   text-decoration: none;
   font-size: 1rem;
   cursor: pointer;
   display: inline-block;
   position: relative;
-  background: #006849;
+  background: rgb(6, 95, 70);
   color: rgb(251, 251, 251);
   border: 2px solid transparent;
   padding: 0.5rem 1rem;
@@ -256,13 +201,13 @@ html {
   border-radius: 15px;
 }
 @media (hover: hover) {
-  #contact-section a:hover {
+  .contact a:hover {
     background: rgb(251, 251, 251);
     color: #002659;
     border: 2px solid #002659;
   }
 }
-#contact-section:visited {
+.contact:visited {
   color: initial;
 }
 
@@ -309,7 +254,7 @@ html {
 
 .footer-submit-btn {
   cursor: pointer;
-  background: #006849;
+  background: rgb(6, 95, 70);
   color: rgb(251, 251, 251);
   border: 2px solid transparent;
   padding: 0.5rem 1.25rem;
@@ -338,7 +283,7 @@ html {
     max-width: 1100px;
     gap: 1.5rem;
     margin-top: 0.25rem;
-    font-family: Dosis;
+    font-family: "Dosis";
   }
   .tools-left,
 .tools-right {
@@ -386,5 +331,5 @@ html {
 }
 .mesh {
   border: 10px solid red;
-  z-index: 10;
+  z-index: 2;
 }/*# sourceMappingURL=App.css.map */

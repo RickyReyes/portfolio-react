@@ -8,11 +8,11 @@ const Hero = () => {
       <Canvas className="box">
         <ambientLight />
         <pointLight position={[1, 1, 1]} />
-        <Box position={[-5, 0, 0]} />
+        <Box position={[0, 0, 0]} />
       </Canvas>
-      <div className="name">
-        <h1 className="name__name">Luis Reyes</h1>
-        <div className="name__title">front-end web developer</div>
+      <div className="hero__name-container">
+        <h1 className="hero__name">Luis Reyes</h1>
+        <small className="hero__title">front-end web developer</small>
       </div>
     </section>
   );
