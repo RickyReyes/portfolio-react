@@ -163,8 +163,8 @@ html {
 .project__img.todo-list {
   background-image: url(../public/images/todo-app-ss.jpg);
 }
-.project__img.comments {
-  background-image: url(../public/images/comments.jpg);
+.project__img.audiophile {
+  background-image: url(../public/images/audiophile.jpg);
   background-size: 150%;
 }
 .project__img.bookmark {
@@ -286,7 +286,7 @@ html {
     font-family: "Dosis";
   }
   .tools-left,
-.tools-right {
+  .tools-right {
     text-align: center;
     flex-direction: row;
     gap: 1.5rem;
