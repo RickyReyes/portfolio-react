@@ -175,11 +175,13 @@ html {
       background-size: 150%;
     }
 
-    &.bookmark {
-      background-image: url(../public/images/bookmark.jpg);
-    }
     &.devjobs {
       background-image: url(../public/images/devjobs.jpg);
+    }
+    &.comments {
+      background-image: url(../public/images/comments.jpg);
+      background-size: 175%;
+      background-position: top -10px center;
     }
   }
 }

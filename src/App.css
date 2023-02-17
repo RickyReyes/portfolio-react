@@ -167,11 +167,13 @@ html {
   background-image: url(../public/images/audiophile.jpg);
   background-size: 150%;
 }
-.project__img.bookmark {
-  background-image: url(../public/images/bookmark.jpg);
-}
 .project__img.devjobs {
   background-image: url(../public/images/devjobs.jpg);
+}
+.project__img.comments {
+  background-image: url(../public/images/comments.jpg);
+  background-size: 175%;
+  background-position: top -10px center;
 }
 
 .contact {
