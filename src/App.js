@@ -12,7 +12,7 @@ function App() {
       photoQuery: "cocktails",
       techStack: ["React", "Tailwind CSS"],
       description:
-        "My baby! Browse through cocktails, or select your available ingredients and see what cocktails you can make. Includes a simple algorithm for sorting cocktails based on selected ingredients, and memoization, routing, filters.",
+        "Browse through cocktails, or select your available ingredients and see what cocktails you can make. Includes a simple algorithm for sorting cocktails based on selected ingredients, and memoization, routing, filters. UX/UI by me.",
       github: "https://github.com/RickyReyes/cocktails",
       liveSite: "https://cocktails-nu-nine.vercel.app/",
     },
@@ -30,9 +30,9 @@ function App() {
       id: 3,
       name: "Flag Game",
       photoQuery: "flag-game",
-      techStack: ["React", "Tailwind CSS", "External API"],
+      techStack: ["React", "Tailwind CSS", "Web API"],
       description:
-        "My first creative project! A short quiz that tests your international flag knowledge. Pulls data from the REST Countries API. Can you score 10/10?",
+        "My first creative project! A short quiz that tests your international flag knowledge, which pulls data from the REST Countries API. I bet you can't score 10 out of 10!",
       github: "https://github.com/RickyReyes/flag-game-react",
       liveSite: "https://flag-game-react-nine.vercel.app",
     },
@@ -41,7 +41,7 @@ function App() {
       id: 4,
       name: "To-do List",
       photoQuery: "todo-list",
-      techStack: ["React", "React Hooks"],
+      techStack: ["React", "Vanilla JS"],
       description:
         "A to-do list app with drag and drop functionality, light and dark mode, and local storage utilization.",
       github: "https://github.com/RickyReyes/todo-app",
