@@ -68,13 +68,40 @@ html {
   }
 }
 
+.skills {
+  background-color: $grey;
+  width: 100%;
+  padding: 2rem 1.5rem 4rem;
+  &__heading {
+    text-align: center;
+  }
+  &__ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.75rem 1rem;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-top: 1rem;
+    &__li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .icon {
+      color: $dark;
+      font-size: 2rem;
+    }
+  }
+}
+
 .projects {
   color: $dark;
   padding: 2rem 1.5rem 4rem;
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: $grey;
+  background-color: #eef;
   &__heading {
     margin: 0 auto;
   }
@@ -167,8 +194,9 @@ html {
       background-position: top 5% left 50%;
     }
 
-    &.todo-list {
-      background-image: url(../public/images/todo-app-ss.jpg);
+    &.dictionary {
+      background-image: url(../public/images/dictionary-ss.png);
+      background-position: left 0%;
     }
     &.audiophile {
       background-image: url(../public/images/audiophile.jpg);
@@ -291,27 +319,6 @@ html {
 }
 
 @media (min-width: 900px) {
-  .tools {
-    justify-content: center;
-    max-width: 1100px;
-    gap: 1.5rem;
-    margin-top: 0.25rem;
-    font-family: $font;
-  }
-
-  .tools-left,
-  .tools-right {
-    text-align: center;
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-
-  .tool {
-    font-style: normal;
-    text-transform: uppercase;
-    font-size: 1.45rem;
-  }
-
   .footer-form {
     gap: 0.5rem;
   }
@@ -319,10 +326,6 @@ html {
     gap: 0.5rem;
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .hello-container {
-    margin-top: 5rem;
   }
 
   .double-r {
@@ -349,11 +352,15 @@ html {
     grid-template-columns: repeat(4, 1fr);
   }
   .project-desc {
-    max-width: 450px;
+    font-size: 1.25rem;
   }
-}
 
-.mesh {
-  border: 10px solid red;
-  z-index: 2;
+  .skills {
+    .icon {
+      font-size: 4rem;
+    }
+    &__ul__li {
+      font-size: 1.25rem;
+    }
+  }
 }
