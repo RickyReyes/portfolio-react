@@ -60,7 +60,7 @@ html {
     color: $dark;
     font-size: 4rem;
     line-height: 50px;
-    padding-bottom: 0.75rem;
+    padding-bottom: 1rem;
   }
   &__title {
     font-size: 0.95rem;
@@ -104,12 +104,12 @@ html {
   background-color: #eef;
   &__heading {
     margin: 0 auto;
+    padding-bottom: 0.75rem;
   }
   &__ul {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding-top: 1rem;
     margin: 0 auto;
   }
   &__show-more {
@@ -224,7 +224,7 @@ html {
   padding: 2rem 2rem 7rem;
   position: relative;
   &__heading {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
   }
   a {
     text-decoration: none;

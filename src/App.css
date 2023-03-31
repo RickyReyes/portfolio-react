@@ -54,7 +54,7 @@ html {
   color: #002659;
   font-size: 4rem;
   line-height: 50px;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1rem;
 }
 .hero__title {
   font-size: 0.95rem;
@@ -98,12 +98,12 @@ html {
 }
 .projects__heading {
   margin: 0 auto;
+  padding-bottom: 0.75rem;
 }
 .projects__ul {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding-top: 1rem;
   margin: 0 auto;
 }
 .projects__show-more {
@@ -215,7 +215,7 @@ html {
   position: relative;
 }
 .contact__heading {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
 }
 .contact a {
   text-decoration: none;

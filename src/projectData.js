@@ -1,7 +1,7 @@
 export const projectData = [
   {
     id: 1,
-    name: "Create Cocktail App",
+    name: "Thirsty",
     photoQuery: "cocktails",
     techStack: ["React", "Tailwind CSS"],
     description:
