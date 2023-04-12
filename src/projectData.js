@@ -5,7 +5,7 @@ export const projectData = [
     photoQuery: "cocktails",
     techStack: ["React", "Tailwind CSS"],
     description:
-      "Browse through cocktails. Select your available ingredients and see what cocktails you can make. Includes a simple algorithm for sorting cocktails based on selected ingredients, and memoization, routing, filters. UX/UI by me.",
+      "Select ingredients you have at hand and see what cocktails you can make, or browse through cocktails. Includes an algorithm for sorting cocktails based on selected ingredients, routing, and tag/filter functionality. Original design.",
     github: "https://github.com/RickyReyes/cocktails",
     liveSite: "https://cocktails-nu-nine.vercel.app/",
   },
@@ -15,7 +15,7 @@ export const projectData = [
     photoQuery: "audiophile",
     techStack: ["React", "React Router", "Sass"],
     description:
-      "A fully responsive, multi-page website for a mock e-commerce electronics company, with input validation, a cart modal, and routing.",
+      "A fully responsive, multi-page website for a mock e-commerce electronics company, with input validation, a cart modal, and routing. Design from the website Front-End Mentor.",
     github: "https://github.com/RickyReyes/audiophile",
     liveSite: "https://audiophile-pink.vercel.app/",
   },
@@ -35,7 +35,7 @@ export const projectData = [
     photoQuery: "devjobs",
     techStack: ["TypeScript", "React", "React Router"],
     description:
-      "A mock website for a tech job postings site. Includes a modal for small screen sizes, filter functionality and routing for each job's detail page.",
+      "A mock website for a tech job postings site. Includes a modal for small screen sizes, filter functionality and routing for each job's detail page. Design from the website Front-End Mentor.",
     github: "https://github.com/RickyReyes/devjobs",
     liveSite: "https://devjobs-seven.vercel.app/",
   },
@@ -45,7 +45,8 @@ export const projectData = [
     name: "Comments",
     photoQuery: "comments",
     techStack: ["TypeScript", "React", "OOP"],
-    description: "An interactive comments section.",
+    description:
+      "An interactive comments section. Design from the website Front-End Mentor.",
     github: "https://github.com/RickyReyes/comments-ts",
     liveSite: "https://comments-ts.vercel.app/",
   },

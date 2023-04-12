@@ -1,17 +1,14 @@
-$light: rgb(251, 251, 251);
-$grey: rgb(243, 243, 243);
-$dark: #002659;
-$accent: rgb(6 95 70);
-$font: "Dosis";
+$light-100: #fbfbff;
+$light-200: #f7f9f9;
+$grey: #b4b4b4;
+$dark: #000a1a;
+$accent: #45b69c;
+$font: "Roboto";
 
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600&display=swap");
 
 .accent {
   color: $accent;
-}
-
-.accent-dark {
-  color: $light;
 }
 
 h1,
@@ -35,45 +32,85 @@ html {
   scroll-behavior: smooth;
 }
 
-.App {
+.header {
+  background-color: $dark;
+  &__container {
+    margin: 0 auto;
+    background-color: $dark;
+    color: $light-200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  &__name {
+    color: $accent;
+    font-weight: 700;
+    font-size: 1.75rem;
+  }
+  &__links {
+    display: flex;
+    gap: 1rem;
+  }
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $accent;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.hero {
+  width: 100%;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 1px 20px rgba(black, 0.1) inset;
-  background-color: $light;
-}
-
-.hero {
-  width: 100%;
-  max-width: 500px;
-  padding: 1.5rem;
-  &__name-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $dark;
+  color: $light-100;
+  padding: 4rem 1.5rem;
+  &__photo {
+    width: 100px;
+    height: 100px;
+    background-size: 250%;
+    background-image: url(/public/images/me.jpg);
+    background-position: top 41.5% left 58%;
+    border-radius: 50%;
+    border: 5px solid $accent;
   }
   &__name {
-    margin: 0 auto;
-    display: inline-block;
     text-align: center;
     font-family: $font;
-    color: $dark;
-    font-size: 4rem;
-    line-height: 50px;
-    padding-bottom: 1rem;
+    color: $light-200;
+    font-size: clamp(2rem, 10vw, 4rem);
+    padding-top: 1.5rem;
+    letter-spacing: 1px;
   }
-  &__title {
-    font-size: 0.95rem;
-    font-style: italic;
+  &__accent {
+    color: $accent;
+  }
+  &__about {
+    font-weight: 500;
+    text-align: center;
+  }
+  &__more-about {
+    font-size: 1.25rem;
+    padding-top: 1.25rem;
   }
 }
 
 .skills {
   background-color: $grey;
+  color: $dark;
   width: 100%;
   padding: 2rem 1.5rem 4rem;
   &__heading {
     text-align: center;
+    color: $dark;
   }
   &__ul {
     display: grid;
@@ -101,7 +138,8 @@ html {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #eef;
+  background-color: $light-100;
+  box-shadow: 0 40px 40px 10px rgba(0, 0, 0, 0.1) inset;
   &__heading {
     margin: 0 auto;
     padding-bottom: 0.75rem;
@@ -124,7 +162,7 @@ html {
 
 .project {
   max-width: 750px;
-  background-color: $light;
+  background-color: $light-100;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -170,6 +208,8 @@ html {
   &__link {
     text-decoration: underline;
     color: $dark;
+    color: $accent;
+    font-weight: 500;
     border: 2px solid transparent;
     text-align: center;
     white-space: nowrap;
@@ -217,7 +257,7 @@ html {
 .contact {
   background-color: $dark;
   width: 100%;
-  color: $light;
+  color: $light-200;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -233,14 +273,14 @@ html {
     display: inline-block;
     position: relative;
     background: $accent;
-    color: $light;
+    color: $light-100;
     border: 2px solid transparent;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
     border-radius: 15px;
     @media (hover: hover) {
       &:hover {
-        background: $light;
+        background: $light-100;
         color: $dark;
         border: 2px solid $dark;
       }
@@ -260,13 +300,13 @@ html {
       sans-serif;
     padding: 0.25rem 0.5rem;
     font-size: 1rem;
-    border-radius: 2px;
+    border-radius: 5px;
     border: 0;
-    border: 2px solid $light;
+    border: 2px solid $dark;
     color: $dark;
     &:focus {
       outline: 0;
-      border: 2px solid $dark;
+      border: 2px solid $accent;
     }
   }
 }
@@ -281,22 +321,22 @@ html {
 
 .message-input {
   resize: none;
-  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  font-family: $font;
   padding: 0.5rem;
   font-size: 1rem;
-  border-radius: 2px;
-  border: 2px solid $light;
+  border-radius: 5px;
+  border: 2px solid $dark;
   color: $dark;
   &:focus {
     outline: 0;
-    border: 2px solid $dark;
+    border: 2px solid $accent;
   }
 }
 
 .footer-submit-btn {
   cursor: pointer;
   background: $accent;
-  color: $light;
+  color: $light-100;
   border: 2px solid transparent;
   padding: 0.5rem 1.25rem;
   border-radius: 15px;
@@ -305,7 +345,7 @@ html {
   margin-top: 0.5rem;
   @media (hover: hover) {
     &:hover {
-      background: $light;
+      background: $light-100;
       color: $dark;
       border: 2px solid $dark;
     }
@@ -318,7 +358,18 @@ html {
   bottom: 2rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
+  .header {
+    padding-inline: 5rem;
+  }
+  .hero {
+    &__photo {
+      background-position: top 41.5% left 58%;
+
+      width: 215px;
+      height: 215px;
+    }
+  }
   .footer-form {
     gap: 0.5rem;
   }

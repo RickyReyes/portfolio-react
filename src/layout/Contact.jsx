@@ -1,8 +1,8 @@
 import React from "react";
 
-const Contact = () => {
+export function Contact() {
   return (
-    <footer className="contact">
+    <footer className="contact" id="contact">
       <h2 className="contact__heading">Contact</h2>
       <form
         className="footer-form"
@@ -32,12 +32,12 @@ const Contact = () => {
         </button>
       </form>
       <div className="footer-arrows">
-        <a href="#top">
+        <a aria-label="back to top" href="#top">
           <i className="fa-solid fa-angles-up" id="home"></i>
         </a>
       </div>
     </footer>
   );
-};
+}
 
 export default Contact;

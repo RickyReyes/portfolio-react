@@ -1,10 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600&display=swap");
 .accent {
-  color: rgb(6, 95, 70);
-}
-
-.accent-dark {
-  color: rgb(251, 251, 251);
+  color: #45b69c;
 }
 
 h1,
@@ -13,7 +9,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Dosis";
+  font-family: "Roboto";
 }
 
 *,
@@ -28,46 +24,87 @@ html {
   scroll-behavior: smooth;
 }
 
-.App {
+.header {
+  background-color: #000a1a;
+}
+.header__container {
+  margin: 0 auto;
+  background-color: #000a1a;
+  color: #f7f9f9;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1) inset;
-  background-color: rgb(251, 251, 251);
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+.header__name {
+  color: #45b69c;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+.header__links {
+  display: flex;
+  gap: 1rem;
+}
+.header__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #45b69c;
+}
+.header__link:hover {
+  text-decoration: underline;
 }
 
 .hero {
   width: 100%;
-  max-width: 500px;
-  padding: 1.5rem;
-}
-.hero__name-container {
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #000a1a;
+  color: #fbfbff;
+  padding: 4rem 1.5rem;
+}
+.hero__photo {
+  width: 100px;
+  height: 100px;
+  background-size: 250%;
+  background-image: url(/public/images/me.jpg);
+  background-position: top 41.5% left 58%;
+  border-radius: 50%;
+  border: 5px solid #45b69c;
 }
 .hero__name {
-  margin: 0 auto;
-  display: inline-block;
   text-align: center;
-  font-family: "Dosis";
-  color: #002659;
-  font-size: 4rem;
-  line-height: 50px;
-  padding-bottom: 1rem;
+  font-family: "Roboto";
+  color: #f7f9f9;
+  font-size: clamp(2rem, 10vw, 4rem);
+  padding-top: 1.5rem;
+  letter-spacing: 1px;
 }
-.hero__title {
-  font-size: 0.95rem;
-  font-style: italic;
+.hero__accent {
+  color: #45b69c;
+}
+.hero__about {
+  font-weight: 500;
+  text-align: center;
+}
+.hero__more-about {
+  font-size: 1.25rem;
+  padding-top: 1.25rem;
 }
 
 .skills {
-  background-color: rgb(243, 243, 243);
+  background-color: #b4b4b4;
+  color: #000a1a;
   width: 100%;
   padding: 2rem 1.5rem 4rem;
 }
 .skills__heading {
   text-align: center;
+  color: #000a1a;
 }
 .skills__ul {
   display: grid;
@@ -84,17 +121,18 @@ html {
   text-align: center;
 }
 .skills__ul .icon {
-  color: #002659;
+  color: #000a1a;
   font-size: 2rem;
 }
 
 .projects {
-  color: #002659;
+  color: #000a1a;
   padding: 2rem 1.5rem 4rem;
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #eef;
+  background-color: #fbfbff;
+  box-shadow: 0 40px 40px 10px rgba(0, 0, 0, 0.1) inset;
 }
 .projects__heading {
   margin: 0 auto;
@@ -110,14 +148,14 @@ html {
   text-decoration: underline;
   text-align: center;
   cursor: pointer;
-  font-family: "Dosis";
+  font-family: "Roboto";
   font-weight: 700;
   font-size: 1.5rem;
 }
 
 .project {
   max-width: 750px;
-  background-color: rgb(251, 251, 251);
+  background-color: #fbfbff;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -137,7 +175,7 @@ html {
 }
 .project__name {
   text-align: left;
-  color: rgb(6, 95, 70);
+  color: #45b69c;
   font-size: 1.25rem;
 }
 .project__tech-stack {
@@ -147,12 +185,12 @@ html {
   padding-bottom: 0.25em;
 }
 .project__tech {
-  color: #002659;
+  color: #000a1a;
   font-size: 0.75rem;
   text-transform: uppercase;
 }
 .project__desc {
-  color: #002659;
+  color: #000a1a;
   padding-bottom: 1rem;
   text-align: left;
 }
@@ -163,7 +201,9 @@ html {
 }
 .project__link {
   text-decoration: underline;
-  color: #002659;
+  color: #000a1a;
+  color: #45b69c;
+  font-weight: 500;
   border: 2px solid transparent;
   text-align: center;
   white-space: nowrap;
@@ -205,9 +245,9 @@ html {
 }
 
 .contact {
-  background-color: #002659;
+  background-color: #000a1a;
   width: 100%;
-  color: rgb(251, 251, 251);
+  color: #f7f9f9;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,8 +263,8 @@ html {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  background: rgb(6, 95, 70);
-  color: rgb(251, 251, 251);
+  background: #45b69c;
+  color: #fbfbff;
   border: 2px solid transparent;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
@@ -232,9 +272,9 @@ html {
 }
 @media (hover: hover) {
   .contact a:hover {
-    background: rgb(251, 251, 251);
-    color: #002659;
-    border: 2px solid #002659;
+    background: #fbfbff;
+    color: #000a1a;
+    border: 2px solid #000a1a;
   }
 }
 .contact:visited {
@@ -250,14 +290,14 @@ html {
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   padding: 0.25rem 0.5rem;
   font-size: 1rem;
-  border-radius: 2px;
+  border-radius: 5px;
   border: 0;
-  border: 2px solid rgb(251, 251, 251);
-  color: #002659;
+  border: 2px solid #000a1a;
+  color: #000a1a;
 }
 .footer-form input:focus {
   outline: 0;
-  border: 2px solid #002659;
+  border: 2px solid #45b69c;
 }
 
 .footer-form > * {
@@ -270,22 +310,22 @@ html {
 
 .message-input {
   resize: none;
-  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  font-family: "Roboto";
   padding: 0.5rem;
   font-size: 1rem;
-  border-radius: 2px;
-  border: 2px solid rgb(251, 251, 251);
-  color: #002659;
+  border-radius: 5px;
+  border: 2px solid #000a1a;
+  color: #000a1a;
 }
 .message-input:focus {
   outline: 0;
-  border: 2px solid #002659;
+  border: 2px solid #45b69c;
 }
 
 .footer-submit-btn {
   cursor: pointer;
-  background: rgb(6, 95, 70);
-  color: rgb(251, 251, 251);
+  background: #45b69c;
+  color: #fbfbff;
   border: 2px solid transparent;
   padding: 0.5rem 1.25rem;
   border-radius: 15px;
@@ -295,9 +335,9 @@ html {
 }
 @media (hover: hover) {
   .footer-submit-btn:hover {
-    background: rgb(251, 251, 251);
-    color: #002659;
-    border: 2px solid #002659;
+    background: #fbfbff;
+    color: #000a1a;
+    border: 2px solid #000a1a;
   }
 }
 
@@ -307,7 +347,15 @@ html {
   bottom: 2rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
+  .header {
+    padding-inline: 5rem;
+  }
+  .hero__photo {
+    background-position: top 41.5% left 58%;
+    width: 215px;
+    height: 215px;
+  }
   .footer-form {
     gap: 0.5rem;
   }

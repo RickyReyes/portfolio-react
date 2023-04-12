@@ -2,7 +2,7 @@ import ProjectCard from "../components/ProjectCard";
 
 export default function Projects({ showMore, setShowMore, renderedProjects }) {
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <h2 className="projects__heading">Projects</h2>
       <ul className="projects__ul">
         {renderedProjects.map((project) => (

@@ -1,6 +1,7 @@
 import "./App.css";
 import { projectData } from "./projectData";
 import { useState } from "react";
+import Header from "./components/Header";
 import Hero from "./layout/Hero";
 import Skills from "./layout/Skills";
 import Projects from "./layout/Projects";
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Hero />
       <Skills />
       <Projects

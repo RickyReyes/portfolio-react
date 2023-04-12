@@ -1,19 +1,20 @@
 import React from "react";
-import { Canvas } from "@react-three/fiber";
-import Box from "../components/Box";
 
 const Hero = () => {
   return (
     <section className="hero">
-      <Canvas className="box">
-        <ambientLight />
-        <pointLight position={[1, 1, 1]} />
-        <Box position={[0, 0, 0]} />
-      </Canvas>
-      <div className="hero__name-container">
-        <h1 className="hero__name">Luis Reyes</h1>
-        <small className="hero__title">front-end web developer</small>
-      </div>
+      <div className="hero__photo"></div>
+      <h1 className="hero__name">
+        Hi, I'm <span className="hero__accent">Luis Reyes</span>
+      </h1>
+      <h2 className="hero__about">
+        a <span className="hero__accent">front-end web developer</span> based in{" "}
+        <span className="hero__accent">Los Angeles</span>
+      </h2>
+      <p className="hero__more-about">
+        I specialize in transforming design concepts into React and CSS code
+        <br />I also enjoy doing some design and creative coding on the side
+      </p>
     </section>
   );
 };

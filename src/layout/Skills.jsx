@@ -7,7 +7,6 @@ import {
   FaCogs,
 } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
-import { TbBrandVscode } from "react-icons/tb";
 
 const skillsData = [
   {
