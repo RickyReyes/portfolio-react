@@ -1,13 +1,13 @@
-export const projectData = [
+export const projects = [
   {
     id: 1,
-    name: "Thirsty",
-    photoQuery: "cocktails",
-    techStack: ["React", "Tailwind CSS"],
+    name: "Space",
+    photoQuery: "space",
+    techStack: ["React", "React Router", "Sass"],
     description:
-      "Select ingredients you have at hand and see what cocktails you can make, or browse through cocktails. Includes an algorithm for sorting cocktails based on selected ingredients, routing, and tag/filter functionality. Original design.",
-    github: "https://github.com/RickyReyes/cocktails",
-    liveSite: "https://cocktails-nu-nine.vercel.app/",
+      "Experience the cosmos like never before with this space tourism brochure website. Built using React, React Router, Sass, and Flexbox, this captivating and seamless web experience showcases the wonders of space travel in style across mobile, tablet, and desktop devices. 🚀🌌",
+    github: "https://github.com/RickyReyes/space-tourism-website",
+    liveSite: "https://space-tourism-website-rickyreyes.vercel.app/",
   },
   {
     id: 2,
@@ -15,39 +15,28 @@ export const projectData = [
     photoQuery: "audiophile",
     techStack: ["React", "React Router", "Sass"],
     description:
-      "A fully responsive, multi-page website for a mock e-commerce electronics company, with input validation, a cart modal, and routing. Design from the website Front-End Mentor.",
+      "Discover the perfect harmony of audio excellence with this mock e-commerce audio electronics site. Crafted with input validation, seamless routing, and a sleek cart modal, this website delivers a delightful shopping experience for audiophiles and music enthusiasts alike. 🎧",
     github: "https://github.com/RickyReyes/audiophile",
     liveSite: "https://audiophile-pink.vercel.app/",
   },
   {
     id: 3,
+    name: "Flags",
+    photoQuery: "flags",
+    techStack: ["React", "Material UI"],
+    description:
+      "Immerse yourself in the world of flags with my addictive flag game, built with Material UI and React, challenge yourself to identify the correct country name for each flag displayed, and embark on a thrilling journey of global knowledge and fun. Currently under construction. 🌍🎮",
+    github: "https://github.com/RickyReyes/flag-game-react",
+    liveSite: "https://flag-game-react-nine.vercel.app/",
+  },
+  {
+    id: 3,
     name: "Dictionary",
     photoQuery: "dictionary",
-    techStack: ["TypeScript", "React", "Rest API"],
+    techStack: ["TypeScript", "REST API", "React"],
     description:
-      "A dictionary app that leverages the Free Dictionary Rest API. Design from the website Front-End Mentor.",
+      "Developed using TypeScript, React, and the Free Dictionary REST API, this app offers an expansive collection of definitions, sentence examples, and synoynms, empowering you with language knowledge at your fingertips. 📘🔍",
     github: "https://github.com/RickyReyes/dictionary",
     liveSite: "https://dictionary-navy.vercel.app/",
-  },
-  {
-    id: 4,
-    name: "DevJobs",
-    photoQuery: "devjobs",
-    techStack: ["TypeScript", "React", "React Router"],
-    description:
-      "A mock website for a tech job postings site. Includes a modal for small screen sizes, filter functionality and routing for each job's detail page. Design from the website Front-End Mentor.",
-    github: "https://github.com/RickyReyes/devjobs",
-    liveSite: "https://devjobs-seven.vercel.app/",
-  },
-
-  {
-    id: 5,
-    name: "Comments",
-    photoQuery: "comments",
-    techStack: ["TypeScript", "React", "OOP"],
-    description:
-      "An interactive comments section. Design from the website Front-End Mentor.",
-    github: "https://github.com/RickyReyes/comments-ts",
-    liveSite: "https://comments-ts.vercel.app/",
   },
 ];

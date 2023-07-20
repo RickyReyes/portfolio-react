@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600&display=swap");
-.accent {
-  color: #45b69c;
-}
-
 h1,
 h2,
 h3,
@@ -37,7 +33,7 @@ html {
   padding: 1.5rem;
 }
 .header__name {
-  color: #45b69c;
+  color: #47ba9f;
   font-weight: 700;
   font-size: 1.75rem;
 }
@@ -49,7 +45,7 @@ html {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
-  color: #45b69c;
+  color: #47ba9f;
 }
 .header__link:hover {
   text-decoration: underline;
@@ -74,7 +70,7 @@ html {
   background-image: url(/public/images/me.jpg);
   background-position: top 41.5% left 58%;
   border-radius: 50%;
-  border: 5px solid #45b69c;
+  border: 5px solid #47ba9f;
 }
 .hero__name {
   text-align: center;
@@ -85,15 +81,19 @@ html {
   letter-spacing: 1px;
 }
 .hero__accent {
-  color: #45b69c;
+  color: #47ba9f;
 }
 .hero__about {
   font-weight: 500;
   text-align: center;
+  padding-bottom: 1.25rem;
 }
-.hero__more-about {
-  font-size: 1.25rem;
-  padding-top: 1.25rem;
+.hero__description {
+  font-size: 1.125rem;
+}
+.hero__description:nth-of-type(2) {
+  padding-top: 0.5rem;
+  opacity: 0.6;
 }
 
 .skills {
@@ -175,7 +175,7 @@ html {
 }
 .project__name {
   text-align: left;
-  color: #45b69c;
+  color: #195d4d;
   font-size: 1.25rem;
 }
 .project__tech-stack {
@@ -202,7 +202,7 @@ html {
 .project__link {
   text-decoration: underline;
   color: #000a1a;
-  color: #45b69c;
+  color: #195d4d;
   font-weight: 500;
   border: 2px solid transparent;
   text-align: center;
@@ -219,29 +219,20 @@ html {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.project__img.cocktails {
-  background-image: url(../public/images/cocktails-ss.png);
-  background-position: top 2% left;
-}
-.project__img.flag-game {
-  background-image: url(../public/images/flag-game-react-ss.png);
-  background-position: top 5% left 50%;
-}
-.project__img.dictionary {
-  background-image: url(../public/images/dictionary-ss.png);
-  background-position: left 0%;
-}
 .project__img.audiophile {
   background-image: url(../public/images/audiophile.jpg);
   background-size: 150%;
 }
-.project__img.devjobs {
-  background-image: url(../public/images/devjobs.jpg);
+.project__img.space {
+  background-image: url(../public/images/space.png);
 }
-.project__img.comments {
-  background-image: url(../public/images/comments.jpg);
-  background-size: 175%;
-  background-position: top -10px center;
+.project__img.flags {
+  background-image: url(../public/images/flags.png);
+  background-position: top 5% left 50%;
+}
+.project__img.dictionary {
+  background-image: url(../public/images/dictionary.png);
+  background-position: left 0%;
 }
 
 .contact {
@@ -263,7 +254,7 @@ html {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  background: #45b69c;
+  background: #195d4d;
   color: #fbfbff;
   border: 2px solid transparent;
   padding: 0.5rem 1rem;
@@ -297,7 +288,7 @@ html {
 }
 .footer-form input:focus {
   outline: 0;
-  border: 2px solid #45b69c;
+  border: 2px solid #47ba9f;
 }
 
 .footer-form > * {
@@ -319,12 +310,12 @@ html {
 }
 .message-input:focus {
   outline: 0;
-  border: 2px solid #45b69c;
+  border: 2px solid #47ba9f;
 }
 
 .footer-submit-btn {
   cursor: pointer;
-  background: #45b69c;
+  background: #195d4d;
   color: #fbfbff;
   border: 2px solid transparent;
   padding: 0.5rem 1.25rem;

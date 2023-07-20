@@ -17,12 +17,7 @@ const ProjectCard = ({ ...project }) => {
           <a className="project__link" href={project.github}>
             Source Code
           </a>
-          <a
-            className="project__link"
-            href={project.liveSite}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className="project__link" href={project.liveSite}>
             Live Site
           </a>
         </div>
